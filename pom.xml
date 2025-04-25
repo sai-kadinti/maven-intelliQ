@@ -37,12 +37,22 @@
   <build>
     <plugins>
       <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
+               <groupId>org.apache.maven.plugins</groupId>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <version>3.11.0</version>
+               <configuration>
+                        <source>17</source> <!-- match your JDK version -->
+                        <target>17</target>
+               </configuration>
       </plugin>
+
+    <!-- WAR Plugin -->
+    <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-war-plugin</artifactId>
+      <version>3.4.0</version>
+    </plugin>
+             
 
       <plugin>
         <artifactId>maven-release-plugin</artifactId>
